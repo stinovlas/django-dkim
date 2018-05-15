@@ -29,7 +29,7 @@ setup(name='django-dkim',
       install_requires=INSTALL_REQUIRES,
       extras_require=EXTRAS_REQUIRE,
       classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: 4 - Beta',
         'Environment :: Web Environment',
         'Framework :: Django',
         'Framework :: Django :: 1.11',

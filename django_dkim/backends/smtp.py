@@ -1,4 +1,4 @@
-"""Django e-mail backends with DKIM signing."""
+"""Django e-mail SMTP backend with DKIM signing."""
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import smtplib
@@ -6,11 +6,11 @@ from builtins import bytes
 
 import dkim
 from django.conf import settings
-from django.core.mail.backends.smtp import EmailBackend
+from django.core.mail.backends.smtp import EmailBackend as SMTPEmailBackend
 from django.core.mail.message import sanitize_address
 
 
-class SMTPEmailBackend(EmailBackend):
+class EmailBackend(SMTPEmailBackend):
     """SMTP backend that signs the message with DKIM."""
 
     def _send(self, email_message):

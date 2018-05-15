@@ -35,7 +35,7 @@ Example
 ^^^^^^^
 ::
 
-    EMAIL_BACKEND = 'django_dkim.backends.SMTPEmailBackend'
+    EMAIL_BACKEND = 'django_dkim.backends.smtp.EmailBackend'
     DKIM_SELECTOR = 'selector'
     DKIM_DOMAIN = 'example.com'
     DKIM_PRIVATE_KEY = '''-----BEGIN RSA PRIVATE KEY-----
@@ -53,3 +53,11 @@ Example
     tvneAzOZg90Gbgi6NznxAkAXQz0rYjnQwRjlCyS/KUG1fek/EfJBlgiDmMtYuUpq
     UPPnqkzsGyB9LqzL4aoKg1LDsbVP0hSt97SYhB9TtcgO
     -----END RSA PRIVATE KEY-----'''
+
+
+---------------------------
+ Available e-mail backends
+---------------------------
+
+* ``django_dkim.backends.smtp.EmailBackend`` - DKIM extension of Django SMTP backend
+* ``django_dkim.backends.console.EmailBackend`` - DKIM extension of Django console backend
