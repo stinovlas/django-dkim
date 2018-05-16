@@ -20,6 +20,17 @@ This library provides custom e-mail backends with DKIM signing for
 itself is provided by `dkimpy library <https://launchpad.net/dkimpy>`_.
 
 
+--------------
+ Installation
+--------------
+
+You can install stable version of `django-dkim` from PyPi:
+
+.. code-block:: bash
+
+    $ pip install django-dkim
+
+
 ----------
  Settings
 ----------
@@ -31,9 +42,12 @@ In order to use this custom backends, you have to add a few configuration option
 * ``DKIM_DOMAIN`` - string containing DKIM domain
 * ``DKIM_PRIVATE_KEY`` - string containing whole private key (including the header)
 
+**Note:** This library is not Django application, so you don't need to change your ``INSTALLED_APPS`` setting.
+
 Example
 ^^^^^^^
-::
+
+.. code-block:: python
 
     EMAIL_BACKEND = 'django_dkim.backends.smtp.EmailBackend'
     DKIM_SELECTOR = 'selector'
