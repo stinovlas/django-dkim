@@ -11,13 +11,12 @@
 .. image:: https://img.shields.io/pypi/djversions/django-dkim.svg
     :target: https://pypi.org/project/django-dkim
 
-DKIM signing is generally better left to the mailserver. However, there are situations
-when you are unable to configure the SMTP server you use for sending mail. If you still
-want to sign your messages with DKIM, you can do it manually, on the application level.
+DKIM signing is generally better left to the mailserver.
+However, there are situations when you are unable to configure the SMTP server you use for sending mail.
+If you still want to sign your messages with DKIM, you can do it manually, on the application level.
 
-This library provides custom e-mail backends with DKIM signing for
-`Django web framework <https://www.djangoproject.com/>`_. Singing
-itself is provided by `dkimpy library <https://launchpad.net/dkimpy>`_.
+This library provides custom e-mail backends with DKIM signing for `Django web framework <https://www.djangoproject.com/>`_.
+Singing itself is provided by `dkimpy library <https://launchpad.net/dkimpy>`_.
 
 
 --------------
@@ -37,10 +36,10 @@ You can install stable version of `django-dkim` from PyPi:
 
 In order to use this custom backends, you have to add a few configuration options into your Django settings.
 
-* ``EMAIL_BACKEND`` - dotted path to custom e-mail backend
-* ``DKIM_SELECTOR`` - string containing DKIM selector
-* ``DKIM_DOMAIN`` - string containing DKIM domain
-* ``DKIM_PRIVATE_KEY`` - string containing whole private key (including the header)
+* ``EMAIL_BACKEND`` — dotted path to custom e-mail backend
+* ``DKIM_SELECTOR`` — string containing DKIM selector
+* ``DKIM_DOMAIN`` — string containing DKIM domain
+* ``DKIM_PRIVATE_KEY`` — string containing whole private key (including the header)
 
 **Note:** This library is not Django application, so you don't need to change your ``INSTALLED_APPS`` setting.
 
@@ -73,8 +72,8 @@ Example
  Available e-mail backends
 ---------------------------
 
-* ``django_dkim.backends.smtp.EmailBackend`` - DKIM extension of Django SMTP backend
-* ``django_dkim.backends.console.EmailBackend`` - DKIM extension of Django console backend
+* ``django_dkim.backends.smtp.EmailBackend`` — DKIM extension of Django SMTP backend
+* ``django_dkim.backends.console.EmailBackend`` — DKIM extension of Django console backend
 
 
 --------------
