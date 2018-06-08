@@ -75,3 +75,14 @@ Example
 
 * ``django_dkim.backends.smtp.EmailBackend`` - DKIM extension of Django SMTP backend
 * ``django_dkim.backends.console.EmailBackend`` - DKIM extension of Django console backend
+
+
+--------------
+ Contributing
+--------------
+
+This project is pretty small and self-contained, but I'm willing to add features, if they are useful.
+If you have an idea, bugfix, or really anything, please create `Issue on GitLab`_.
+Don't create GitHub issues — the GitHub repo is only a mirror of GitLab, where real development happens.
+
+.. _Issue on GitLab: https://gitlab.com/stinovlas/django-dkim/issues
