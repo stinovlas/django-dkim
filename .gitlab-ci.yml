@@ -32,6 +32,12 @@ python3.6:
             - .coverage
         expire_in: 1h
 
+python3.7:
+    image: python:3.7-rc-alpine
+    script:
+        - tox -e py37-django111,py37-django20
+
+
 coverage:
     stage: coverage
     before_script:
