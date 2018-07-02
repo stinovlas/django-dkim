@@ -19,6 +19,10 @@ python2.7:
     script:
         - tox -e py27-django111
 
+python3.4:
+    image: python:3.4-alpine
+    script:
+        - tox -e py34-django111,py34-django20
 python3.5:
     image: python:3.5-alpine
     script:
@@ -31,6 +35,12 @@ python3.6:
         paths:
             - .coverage
         expire_in: 1h
+
+python3.7:
+    image: python:3.7-rc-alpine
+    script:
+        - tox -e py37-django111,py37-django20
+
 
 coverage:
     stage: coverage
