@@ -2,10 +2,8 @@
  django-dkim
 =============
 
-.. image:: https://gitlab.com/stinovlas/django-dkim/badges/master/pipeline.svg
-    :target: https://gitlab.com/stinovlas/django-dkim
-.. image:: https://gitlab.com/stinovlas/django-dkim/badges/master/coverage.svg
-    :target: https://gitlab.com/stinovlas/django-dkim
+.. image:: https://img.shields.io/github/workflow/status/stinovlas/django-dkim/Run%20python%20tests%20and%20quality%20control/master
+    :target: https://github.com/stinovlas/django-dkim/actions
 .. image:: https://img.shields.io/pypi/pyversions/django-dkim.svg
     :target: https://pypi.org/project/django-dkim
 .. image:: https://img.shields.io/pypi/djversions/django-dkim.svg
