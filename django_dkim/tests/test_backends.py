@@ -32,7 +32,7 @@ class TestSMTPEmailBackend(SimpleTestCase):
         args, kwargs = instance.sendmail.call_args
         self.assertEqual(args[0], 'from@example.com')
         self.assertEqual(args[1], ['to@example.com'])
-        self.assertTrue(dkim.verify(args[2], dnsfunc=lambda x: DNS_TXT_RECORD))
+        self.assertTrue(dkim.verify(args[2], dnsfunc=lambda *args, **kwargs: DNS_TXT_RECORD))
 
     @patch('smtplib.SMTP')
     def test_zero_recipients(self, mock_smtp):
@@ -74,4 +74,4 @@ class TestConsoleEmailBackend(SimpleTestCase):
         sent = get_connection(stream=out).send_messages([email])
         self.assertEqual(sent, 1)
         match = re.match('^(.*)\n-{79}\n$', out.getvalue(), flags=re.DOTALL)
-        self.assertTrue(dkim.verify(bytes(match.group(1), 'utf-8'), dnsfunc=lambda x: DNS_TXT_RECORD))
+        self.assertTrue(dkim.verify(bytes(match.group(1), 'utf-8'), dnsfunc=lambda *args, **kwargs: DNS_TXT_RECORD))
