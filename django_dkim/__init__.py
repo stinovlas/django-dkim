@@ -1,3 +1,3 @@
 """Package containing Django e-mail backends with DKIM signing."""
 
-__version__ = '0.1.2'
+__version__ = '0.1.3'
